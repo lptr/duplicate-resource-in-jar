@@ -1,0 +1,20 @@
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:27.0.1-jre'
+}
+
+jar {
+    from file("src/main/resources-2")
+}
+
+// Define the main class for the application
+mainClassName = 'org.lptr.test.duplicateresource.App'
